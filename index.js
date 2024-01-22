@@ -23,28 +23,28 @@ client.on('ready', async () => {
   console.log(`${client.user.tag} - rich presence started!`);
 
   const r = new Discord.RichPresence()
-    .setApplicationId('')
+    .setApplicationId('1101664960372817940')
     .setType('STREAMING')
-    .setURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ') //Must be a youtube video link 
-    .setState('Recording')
-    .setName('')
-    .setDetails(`Valorant [${formatTime()}]`)
+    .setURL('https://youtube.com/watch?v=xvFZjo5PgG0') //Must be a youtube video link 
+    .setState('She is mine')
+    .setName('Lol')
+    .setDetails(`Lol [${formatTime()}]`)
     .setStartTimestamp(Date.now())
- .setAssetsLargeImage('') //You can put links in tenor or discord and etc.
-    .setAssetsLargeText('Boring') //Text when you hover the Large image
-    .setAssetsSmallImage('') //You can put links in tenor or discord and etc.
-    .setAssetsSmallText('Twitch') //Text when you hover the Small image
-    .addButton('Watch', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-    .addButton('Donate', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+ .setAssetsLargeImage('https://media.discordapp.net/attachments/640889563463811104/1101665402234343456/majo-no-tabitabi-the-journey-of-elaina_2.gif') //You can put links in tenor or discord and etc.
+    .setAssetsLargeText('She is mine lol') //Text when you hover the Large image
+    .setAssetsSmallImage('https://media.discordapp.net/attachments/640889563463811104/1099239219261607946/verified-verificado.gif') //You can put links in tenor or discord and etc.
+    .setAssetsSmallText('Verified my waifu') //Text when you hover the Small image
+    .addButton('Watch', 'https://youtube.com/watch?v=xvFZjo5PgG0')
+    .addButton('Lol', 'https://youtube.com/watch?v=xvFZjo5PgG0');
 
   client.user.setActivity(r);
-  client.user.setPresence({ status: "dnd" }); //dnd, online, idle, offline
+  client.user.setPresence({ status: "online" }); //dnd, online, idle, offline
 
   let prevTime = null;
   setInterval(() => {
     const newTime = formatTime();
     if (newTime !== prevTime) {
-      const newDetails = ` [${newTime}]`;
+      const newDetails = `Lol[${newTime}]`;
       r.setDetails(newDetails);
       client.user.setActivity(r);
       prevTime = newTime;
